@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-descricao.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Menu da Cantina da Universidade</title>
+</head>
+<body>
+    <header class="header">
+        <a class="logo">
+            <img src="{{ url_for('static', filename='img/logo-vassouras.png')}}">
+        </a>
+
+    </header>   
+    <section class="products" id="products">
+        <h1 class="heading"><span>Nossos Produtos</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="{{ url_for('static', filename= lanche.imagem)}}" alt="">
+                </div>
+                <div class="content">
+                    <h3>{{lanche.nome}}</h3>
+                    <div class="price">{{lanche.preco}}</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <p class="p_descricao" ></p> 
+                    <p class="p_igrediente"> 
+                        {{lanche.igrediente}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>
